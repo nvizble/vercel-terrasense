@@ -53,6 +53,44 @@
   text-decoration: underline;
 }
 
+.nav-buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-buttons h2 {
+  color: #ffffff;
+  font-size: 16px;
+}
+
+.nav-buttons .btn-signin {
+  background-color: transparent;
+  color: #87A922;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.nav-buttons .btn-signin:hover {
+  color: #b4d744;
+}
+
+.nav-buttons .btn-signup {
+  background-color: #b4d744;
+  color: #3e4e19;
+  padding: 11px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.nav-buttons .btn-signup:hover {
+  background-color: #87a922;
+}
+  
+
 /* Media Queries para responsividade */
 @media (max-width: 992px) {
   #navbar {

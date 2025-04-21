@@ -122,7 +122,7 @@ const Footer = () => (
       <p>
         Guilherme Alves Rodrigues Ferreira
         <br />
-        Guilherme Rafael Schumann Carvalho
+        Hiago Granelli Ribeiro
         <br />
         João Pedro Brehula Souza
         <br />

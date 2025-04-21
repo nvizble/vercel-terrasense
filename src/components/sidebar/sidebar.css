@@ -1,0 +1,172 @@
+.sidebar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  z-index: 999;
+  opacity: 0;
+  animation: fadeIn 0.3s forwards;
+  transition: opacity 0.3s ease, backdrop-filter 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 400px;
+  height: 100vh;
+  background-color: #000;
+  background-image: url('../../../public/images/background-images/background_sidebar.png');
+  background-size: cover;
+  background-position: center;
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  padding: 20px 0 0;
+  overflow-y: auto;
+  transform: translateX(100%);
+  transition: transform 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+  will-change: transform;
+}
+
+.sidebar.open {
+  right: 0;
+  transform: translateX(0);
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 0;
+}
+
+.close-btn {
+  background-color: #87A922;
+  border: none;
+  width: 72px;
+  height: 40px;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  transition: background-color 0.3s ease;
+}
+
+.close-btn:hover {
+  background-color: #668219;
+}
+
+.close-btn span {
+  display: inline-block;
+  color: white;
+}
+
+.sidebar-content {
+  padding: 20px;
+}
+
+.sidebar-content img {
+  width: 90px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.sidebar-content h2 {
+  margin: 16px 0;
+  color: #fff;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.signup-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: #fff;
+  text-align: left;
+}
+
+.signup-form input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.submit-btn {
+  background-color: #87A922;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 10px;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submit-btn:hover {
+  background-color: #668219;
+}
+
+.separator {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 20px 0;
+  color: #fff;
+}
+
+.separator::before,
+.separator::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.separator::before {
+  margin-right: 10px;
+}
+
+.separator::after {
+  margin-left: 10px;
+}
+
+.signup-link {
+  color: #fff;
+  text-align: center;
+  margin-top: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.signup-link b {
+  color: #668219;
+}
+
+.signin-link {
+  color: #668219;
+  text-align: center;
+  margin-top: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+@media (max-width: 450px) {
+  .sidebar {
+    width: 100%;
+  }
+} 

@@ -31,13 +31,13 @@
     margin: 0px;
     width: 320px;
   }
+
 }
 
 .que-tal-transformar {
   display: flex;
   flex-direction: column;
   text-align: left;
-  gap: 32px;
 }
 
 .que-tal-transformar > h3 {
@@ -60,7 +60,7 @@
 
 .nos-somos-terrasense > img {
   width: 220px;
-  margin-top: 12px;
+  margin-top: -20px;
 }
 
 .como-funciona {

@@ -2,7 +2,7 @@ import "./forms.css";
 import Container from 'react-bootstrap/Container';
 import React, { useState, memo, useEffect } from 'react';
 
-const FormField = memo(({ 
+export const FormField = memo(({ 
   id, 
   label, 
   type = 'text', 

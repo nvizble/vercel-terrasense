@@ -1,8 +1,11 @@
 import "./hero.css";
 import "../utils/buttons/buttonFilled";
 import "../utils/buttons/buttonOutlined";
+import { useSidebar } from "../../contexts/SidebarContext";
 
 const Hero = () => {
+  const { toggleSidebar, toggleSignUp } = useSidebar();
+
   return (
     <section
       className="container-fluid hero"
@@ -19,18 +22,13 @@ const Hero = () => {
         />
         <div className="container-hero">
           <h1>Plantando tecnologia, colhendo resultados</h1>
-          <a
-            className="link"
-            href="https://www.youtube.com/watch?v=v02XTsBCGqk&feature=youtu.be"
-            target="_blank"
-          >
-            Link do Pitch Vídeo
-          </a>
+          <a className="link" href="https://www.youtube.com/watch?v=gwdACmOo3vI" target="_blank" rel="noreferrer">Link do Pitch Vídeo</a>
           <div className="buttons-hero">
-            <buttonOutlined className="btn-outlined">
-              Entrar em Contato
-            </buttonOutlined>
-            <buttonFilled className="btn-filled">Criar Conta</buttonFilled>
+            <buttonOutlined className="btn-outlined">Entrar em Contato</buttonOutlined>
+            <buttonFilled className="btn-filled" onClick={() => {
+              toggleSignUp();
+              toggleSidebar();
+            }}>Criar Conta</buttonFilled>
           </div>
           <img
             src="/images/terrasense/icon_scroll_down.svg"
@@ -39,7 +37,8 @@ const Hero = () => {
         </div>
       </div>
     </section>
+    
   );
 };
 
-export { Hero };
+  export {Hero};

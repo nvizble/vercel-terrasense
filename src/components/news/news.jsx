@@ -9,7 +9,7 @@ const News = () => {
 
   useEffect(() => {
     const fetchNews = async () => {
-      const API_KEY = process.env.REACT_APP_EVENT_REGISTRY_API_KEY;
+      const API_KEY = "888edfb7-7c86-4bb8-97e0-8680a5c627ac";
       const API_URL = "https://eventregistry.org/api/v1/article/getArticles";
       const requestBody = {
         action: "getArticles",
